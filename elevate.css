@@ -1,17 +1,20 @@
-@charset "UTF-8";
 /* Variables */
 /* Mixins */
-/* Mixin za jako male ekrane (do 576px) */
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
+/* Primary Button */
+.primary-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
 }
-
-h2 {
-  font-size: 32px;
+.primary-btn:hover {
+  box-shadow: 0px 5px 15px rgba(255, 126, 95, 0.4);
 }
 
 /* Navbar */
@@ -22,7 +25,6 @@ h2 {
   padding: 15px 30px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
-  /* Dugmići u navigaciji su centrirani */
 }
 @media screen and (max-width: 576px) {
   .navbar {
@@ -38,7 +40,6 @@ h2 {
 .navbar .nav-links {
   list-style: none;
   padding: 0;
-  /* Centriranje unutar liste */
 }
 @media screen and (max-width: 576px) {
   .navbar .nav-links {
@@ -58,30 +59,12 @@ h2 {
   color: #ff7e5f;
 }
 
-/* Primary Button */
-.primary-btn {
-  display: inline-block;
-  padding: 15px 30px;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(45deg, #ff7e5f, #feb47b);
-}
-.primary-btn:hover {
-  box-shadow: 0px 5px 15px rgba(255, 126, 95, 0.4);
-}
-
 /* Main Section */
 .main {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 100px 10px;
-  /* Naslov i slika se nalaze jedan ispod drugog i centrirani su */
 }
 @media screen and (max-width: 576px) {
   .main {
@@ -93,7 +76,6 @@ h2 {
 }
 .main .content {
   width: 50%;
-  /* Širenje tekstualnog sadržaja na mobilnom */
 }
 @media screen and (max-width: 576px) {
   .main .content {
@@ -114,7 +96,6 @@ h2 {
 }
 .main img {
   width: 40%;
-  /* Prilagođavanje slike na mobilnom */
 }
 @media screen and (max-width: 576px) {
   .main img {
@@ -163,6 +144,18 @@ h2 {
   padding: 20px;
   background: #222;
   color: white;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 32px;
 }
 
 /*# sourceMappingURL=elevate.css.map */

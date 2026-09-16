@@ -1,0 +1,16 @@
+@use 'variables' as *;
+@use 'primary-btn';
+@use 'header';
+@use 'content';
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 32px;
+}
