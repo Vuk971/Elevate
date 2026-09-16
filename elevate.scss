@@ -11,6 +11,13 @@ $box-shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 }
 
+/* Mixin za jako male ekrane (do 576px) */
+@mixin respond-to-mobile {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
@@ -32,6 +39,12 @@ h2 {
   box-shadow: $box-shadow-light;
   margin-bottom: 10px;
 
+  /* Dugmići u navigaciji su centrirani */
+  @include respond-to-mobile {
+    flex-direction: column;
+    gap: 15px;
+  }
+
   .logo {
     font-size: 24px;
     font-weight: bold;
@@ -41,6 +54,12 @@ h2 {
   .nav-links {
     list-style: none;
     padding: 0;
+    
+    /* Centriranje unutar liste */
+    @include respond-to-mobile {
+      margin: 0;
+      text-align: center;
+    }
 
     li {
       display: inline-block;
@@ -83,13 +102,30 @@ h2 {
   justify-content: space-between;
   padding: 100px 10px;
 
+  /* Naslov i slika se nalaze jedan ispod drugog i centrirani su */
+  @include respond-to-mobile {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
   .content {
     width: 50%;
+
+    /* Širenje tekstualnog sadržaja na mobilnom */
+    @include respond-to-mobile {
+      width: 100%;
+    }
   }
 
   h1 {
     font-size: 48px;
     color: $primary-color;
+    
+    @include respond-to-mobile {
+      font-size: 36px; 
+    }
   }
 
   p {
@@ -98,6 +134,11 @@ h2 {
 
   img {
     width: 40%;
+
+    /* Prilagođavanje slike na mobilnom */
+    @include respond-to-mobile {
+      width: 80%;
+    }
   }
 }
 
